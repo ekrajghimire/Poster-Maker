@@ -1,4 +1,7 @@
-# poster_maker
+# Poster Maker
+# Poster Maker for Emotions ✨
+
+- [Find us on Instagram: @your_emotions_speaks](https://www.instagram.com/your_emotions_speaks/)
 
 A new Flutter project.
 
