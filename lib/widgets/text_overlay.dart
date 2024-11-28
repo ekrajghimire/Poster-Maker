@@ -13,7 +13,7 @@ class TextOverlay extends StatefulWidget {
 class _TextOverlayState extends State<TextOverlay> {
   String _text = 'Click Here to Enter Your Text';
   final Color _textColor = Colors.white;
-  double _fontSize = 16.0;
+  double _fontSize = 14.0;
   String _fontFamily = 'AppleGothic';
   FontWeight _fontWeight = FontWeight.normal;
   FontStyle _fontStyle = FontStyle.normal;
