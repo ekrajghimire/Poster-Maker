@@ -3,6 +3,9 @@
 
 - [Find us on Instagram: @your_emotions_speaks](https://www.instagram.com/your_emotions_speaks/)
 
+![Alt text](path/to/image.jpg)
+
+
 A new Flutter project.
 
 ## Getting Started
