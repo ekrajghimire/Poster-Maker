@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 class TextOverlay extends StatefulWidget {
   final Function(String)? onTextChanged;
 
-  const TextOverlay({Key? key, this.onTextChanged}) : super(key: key);
+  const TextOverlay({super.key, this.onTextChanged});
 
   @override
   _TextOverlayState createState() => _TextOverlayState();
 }
 
 class _TextOverlayState extends State<TextOverlay> {
-  String _text = 'Your Text\nHere';
-  Color _textColor = Colors.white;
+  String _text = 'Click Here to Enter Your Text';
+  final Color _textColor = Colors.white;
   double _fontSize = 16.0;
   String _fontFamily = 'AppleGothic';
   FontWeight _fontWeight = FontWeight.normal;
@@ -24,7 +24,7 @@ class _TextOverlayState extends State<TextOverlay> {
         fontStyle: _fontStyle,
         color: _textColor,
         fontFamily: _fontFamily,
-        shadows: [
+        shadows: const [
           Shadow(
             blurRadius: 10.0,
             color: Colors.black,
@@ -71,7 +71,7 @@ class _TextOverlayState extends State<TextOverlay> {
                             },
                           ),
                         ),
-                        Text('${_fontSize.toStringAsFixed(0)}'),
+                        Text(_fontSize.toStringAsFixed(0)),
                       ],
                     ),
                     DropdownButton<String>(

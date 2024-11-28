@@ -7,7 +7,7 @@ import 'dart:ui' as ui;
 import 'package:universal_html/html.dart' as html;
 
 class PosterScreen extends StatefulWidget {
-  const PosterScreen({Key? key}) : super(key: key);
+  const PosterScreen({super.key});
 
   @override
   _PosterScreenState createState() => _PosterScreenState();
@@ -109,7 +109,7 @@ class _PosterScreenState extends State<PosterScreen> {
         key: _globalKey,
         child: SingleChildScrollView(
           child: Center(
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               child: BackgroundImage(
