@@ -3,10 +3,13 @@
 
 - [Find us on Instagram: @your_emotions_speaks](https://www.instagram.com/your_emotions_speaks/)
 
-![Alt text](path/to/image.jpg)
+<p align="left">
+  <img src="https://github.com/ekrajghimire/Poster-Maker/blob/main/poster-maker.png" alt="Description" width="400"/>
+</p>
 
 
-A new Flutter project.
+
+A new Flutter project for Emotions ✨.
 
 ## Getting Started
 
