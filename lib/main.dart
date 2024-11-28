@@ -15,6 +15,11 @@ class PosterMakerApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black, // Change app bar color here
+          foregroundColor: Colors.white, // Color of the text and icons
+          elevation: 4, // Optional: adds a shadow to the app bar
+        ),
       ),
       home: const PosterScreen(),
       debugShowCheckedModeBanner: false,

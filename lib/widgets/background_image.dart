@@ -15,7 +15,7 @@ class BackgroundImage extends StatelessWidget {
             width:
                 MediaQuery.of(context).size.width * 0.90, // 90% of screen width
             height: MediaQuery.of(context).size.height *
-                0.90, // 90% of screen height
+                0.85, // 85% of screen height
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(AppConstants.backgroundImage),

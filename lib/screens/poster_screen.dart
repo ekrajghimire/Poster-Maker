@@ -14,7 +14,7 @@ class PosterScreen extends StatefulWidget {
 }
 
 class _PosterScreenState extends State<PosterScreen> {
-  final GlobalKey _globalKey = GlobalKey();
+  final GlobalKey _posterKey = GlobalKey();
   String _currentText = 'Your Text Here';
 
   Future<void> _downloadPoster() async {
@@ -38,14 +38,14 @@ class _PosterScreenState extends State<PosterScreen> {
   }
 
   Future<Uint8List?> _captureImage() async {
-    // Find the RenderRepaintBoundary
+    // Find the RenderRepaintBoundary for the poster
     final RenderRepaintBoundary? boundary =
-        _globalKey.currentContext?.findRenderObject() as RenderRepaintBoundary?;
+        _posterKey.currentContext?.findRenderObject() as RenderRepaintBoundary?;
 
     if (boundary == null) return null;
 
-    // Capture the image with higher resolution
-    final ui.Image image = await boundary.toImage(pixelRatio: 3.0);
+    // Capture the image with high resolution
+    final ui.Image image = await boundary.toImage(pixelRatio: 4.0);
 
     // Convert to byte data
     final ByteData? byteData =
@@ -105,13 +105,16 @@ class _PosterScreenState extends State<PosterScreen> {
           ),
         ],
       ),
-      body: RepaintBoundary(
-        key: _globalKey,
-        child: SingleChildScrollView(
-          child: Center(
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
+      body: Center(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: MediaQuery.of(context).size.width * 0.9,
+            maxHeight: MediaQuery.of(context).size.height * 0.8,
+          ),
+          child: RepaintBoundary(
+            key: _posterKey,
+            child: AspectRatio(
+              aspectRatio: 1 / 1, // Square poster
               child: BackgroundImage(
                 child: TextOverlay(
                   onTextChanged: (text) {
